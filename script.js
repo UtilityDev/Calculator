@@ -1,19 +1,44 @@
 let firstNumber = null;
-let operator = null;
 let secondNumber = null;
+let operator = null;
 
-function add () {
-    
+// Addition
+function add (firstNum, secondNum) {
+    return firstNum + secondNum;
 }
 
-function subtract () {
-
+// Subtraction
+function subtract (firstNum, secondNum) {
+    return firstNum - secondNum;
 }
 
-function multiply () {
-
+// Multiplication
+function multiply (firstNum, secondNum) {
+    return firstNum * secondNum;
 }
 
-function divide () {
+// Division
+function divide (firstNum, secondNum) {
+    return firstNum / secondNum;
+}
 
+// Perform operation on given numbers
+function operate (operator, firstNum, secondNum) {
+    firstNumber = firstNum;
+    secondNumber = secondNum;
+
+    switch (operator) {
+        case '+':
+            add(firstNum, secondNum);
+            break;
+        case '-':
+            subtract(firstNum, secondNum);
+            break;
+        case '*':
+            multiply(firstNum, secondNum);
+            break;
+        case '/':
+            divide(firstNum, secondNum);
+            break;
+    }
 }
